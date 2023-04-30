@@ -15,12 +15,16 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Column(
-        children: [
-          ElevatedButton(onPressed: () {
-            context.push("/login");
-          }, child: Text("Login"),)
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            ElevatedButton(onPressed: () {
+              context.push("/login");
+              },
+              child: Text("Login"),
+            ),
+          ],
+        ),
       ),
     );
   }
